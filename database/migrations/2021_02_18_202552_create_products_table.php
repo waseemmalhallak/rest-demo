@@ -20,9 +20,9 @@ class CreateProductsTable extends Migration
             $table->string('photo');
             $table->integer('status')->default(0);
             $table->decimal('price');
-            $table->unsignedBigInteger('category_id');
+            $table->unsignedBigInteger('c_id');
             $table->timestamps();
-            $table->foreign('category_id')->references('id')->on('product_categories');
+            $table->foreign('c_id')->references('id')->on('product_categories');
         });
     }
 

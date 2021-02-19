@@ -154,67 +154,25 @@
                                 </div>
                             @endforeach
                         </div>
+                        @foreach ($products as $product)
                         <div class="slider slider-single">
                             <div>
                                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                     <div class="offer-item">
-                                        <img src="images/menu-item-thumbnail-01.jpg" alt="" class="img-responsive">
+                                    <img src="{{asset($product->photo)}}" alt="" class="img-responsive">
                                         <div>
-                                            <h3>GARLIC BREAD</h3>
+                                            <h3>{{$product->product_name}}</h3>
                                             <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis eleifend dapibus.
+                                                {{$product->description}}
                                             </p>
                                         </div>
-                                        <span class="offer-price">$8.5</span>
+                                        <span class="offer-price">${{$product->price}}</span>
                                     </div>
                                 </div>
                                 <!-- end col -->
                             </div>
-                            <div>
-                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
-                                    <div class="offer-item">
-                                        <img src="images/menu-item-thumbnail-04.jpg" alt="" class="img-responsive">
-                                        <div>
-                                            <h3>MEAT FEAST PIZZA</h3>
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis eleifend dapibus.
-                                            </p>
-                                        </div>
-                                        <span class="offer-price">$5</span>
-                                    </div>
-                                </div>
-                                <!-- end col -->
-                            </div>
-                            <div>
-                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
-                                    <div class="offer-item">
-                                        <img src="images/menu-item-thumbnail-07.jpg" alt="" class="img-responsive">
-                                        <div>
-                                            <h3>CHOCOLATE FUDGECAKE</h3>
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis eleifend dapibus.
-                                            </p>
-                                        </div>
-                                        <span class="offer-price">$4.5</span>
-                                    </div>
-                                </div>
-                                <!-- end col -->
-                            </div>
-                            <div>
-                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
-                                    <div class="offer-item">
-                                        <img src="images/menu-item-thumbnail-10.jpg" alt="" class="img-responsive">
-                                        <div>
-                                            <h3>MEAT FEAST PIZZA</h3>
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis eleifend dapibus.
-                                            </p>
-                                        </div>
-                                        <span class="offer-price">$12.5</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        </div>    
+                        @endforeach
                     </div>
                     <!-- end tab-menu -->
                 </div>
